@@ -5,3 +5,29 @@ html, body {
 #map {
     height:100%
 }   
+.layout{
+    height:calc(100%-64px);
+    display:flex;
+    justu-ify-content:center;
+    align-items:center;
+}
+
+#home screen{
+    max-width:480px;
+    padding:24px28px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(15,23,42,0.18);
+    text-align:center;
+}
+
+
+#show-map-btn {
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
