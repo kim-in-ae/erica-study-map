@@ -1,0 +1,186 @@
+<!DOCTYPE html
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERICA 스터디 맵</title>
+    
+    <!-- CSS 연결 (나중에 main.css에서 스타일링) -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- 감성 폰트 예시 (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>ERICA 스터디 맵</h1>
+
+    <!--지도 페이로 이동하는 버튼-->
+    <button onclick="location.href='map.html'">
+        지도 보러가기
+    </button>
+
+    <header>
+        <h2>공부하기 좋은 장소 10선</h2>
+        <p class="subtitle">ERICA 학생들이 자주 찾는 스팟들</p>
+    </header>
+
+    <main id="places">
+
+        <section class="place-card">
+            <img src="images/학술정보관.jpg" alt="ERICA 학술정보관">
+            <h3>ERICA 학술정보관</h3>
+            <p>조용하고 집중하기 좋은 대표 공간. 전원, 와이파이, 열람실 완비!</p>
+            <p class="tag">#도서관 #집중 #정숙</p>
+
+            <!-- ▼ 하위 장소들 소개 시작 ▼ -->
+             <div class="sub-places">
+
+                <!-- 하위 장소 1 -->
+                <div class="sub-place">
+                    <h3>1층 로비</h3>
+                    <p>자유로운 분위기와 탁 트인 공부 공간.</p>
+                    <p class="tag">#자유로움 #가볍게공부하기좋은공간</p>
+                </div>
+                
+                <!-- 하위 장소 2 -->
+                <div class="sub-place">
+                    <h3>1층 멀티스페이스</h3>
+                    <p>독특하고 다양한 구조의 학습 공간.</p>
+                    <p class="tag">#유니크 #다양함 #리클라이너</p>
+                </div>
+                
+                <!-- 하위 장소 3 -->
+                <div class="sub-place">
+                    <h3>1층 뜨끈하냥</h3>
+                    <p>아늑한 분위기의 좌식 및 온돌형 공부 공간.</p>
+                    <p class="tag">#아늑 #따뜻 #좌식 #온돌 #만화책</p>
+                </div>
+
+                <!-- 하위 장소 4 -->
+                <div class="sub-place">
+                    <h3>2층 제1열람실</h3>
+                    <p>학정에서 가장 조용한 공부 공간.</p>
+                    <p class="tag">#집중 #조용</p>
+                </div>
+
+                <!-- 하위 장소 5 -->
+                <div class="sub-place">
+                    <h3>2층 라운지</h3>
+                    <p>대화가 가능한 머리 식히기 좋은 공부 공간.</p>
+                    <p class="tag">#대화가능 #휴식 </p>
+                </div>
+
+                <!-- 하위 장소 6 -->
+                <div class="sub-place">
+                    <h3>2층 KT&G 상상 UNIV 아틀리에</h3>
+                    <p>느좋 카페 같은 색다른 분위기의 공부 공간.</p>
+                    <p class="tag">#색다른분위기 #느좋</p>
+                </div>
+
+                <!-- 하위 장소 7 -->
+                <div class="sub-place">
+                    <h3>3층 도서관</h3>
+                    <p>책 읽으며 공부할 수 있는 공간.</p>
+                    <p class="tag">#도서관</p>
+                </div>
+
+                <!-- 하위 장소 8 -->
+                <div class="sub-place">
+                    <h3>4층 제2열람실</h3>
+                    <p>키보드 사용 가능. 제1열람실보다는 비교적 자유로운 분위기의 공부 공간.</p>
+                    <p class="tag">#키보드사용가능 #집중 #비교적자유로움</p>
+                </div>
+
+                <!-- 하위 장소 9 -->
+                <div class="sub-place">
+                    <h3>4층 집중열람실</h3>
+                    <p>독서실 같은 구조의 완전 몰입 가능한 공부 공간.</p>
+                    <p class="tag">#독서실 #집중 #몰입 #조용</p>
+                </div>
+
+                <!-- 하위 장소 10 -->
+                <div class="sub-place">
+                    <h3> 4층 노상일 HOLMZ 라운지</h3>
+                    <p>키보드 및 마우스 사용 가능한 조용한 카페 같은 분위기의 공부 공간.</p>
+                    <p class="tag">#조용 #카페 #키보드사용가능 #마우스사용가능</p>
+                </div>
+
+                <!-- 하위 장소 11 -->
+                <div class="sub-place">
+                    <h3>4층 그룹스터디룸</h3>
+                    <p>화이트보드와 대형스크린 완비. 팀플이나 발표 연습에 용이한 공부 공간.</p>
+                    <p class="tag">#팀플 #발표연습 #협업 #대화가능 #에약필요</p>
+                </div>
+
+            </div>
+            <!-- ▲ 하위 장소 끝 ▲ -->
+
+        </section>
+
+        <section class="place-card">
+            <img src="images/studentcenter.jpg" alt="제1공학관 해동 Open Space">
+            <h3>제1공학관 해동 Open Space</h3>
+            <p>제1공학관 1층에 위치. 24시간 운영.</p>
+            <p class="tag">#공대생에게추천</p>
+        </section>
+
+        <section class="place-card">
+            <img src="images/cafe1.jpg" alt="제1공학관 한자공 라운지">
+            <h3>제1공학관 한자공 라운지</h3>
+            <p>제1공학관 3층에 위치. 24시간 운영.자유로운 분위기.</p>
+            <p class="tag">#공대생에게추천</p>
+        </section>
+
+        <section class="place-card">
+            <img src="images/cafe1.jpg" alt="제1공학관 한자공 라운지">
+            <h3>제1공학관 한자공 라운지</h3>
+            <p>제1공학관 3층에 위치. 24시간 운영. 자유로운 분위기.</p>
+            <p class="tag">#공대생에게추천</p>
+        </section>
+
+        <section class="place-card">
+            <img src="images/cafe1.jpg" alt="제5공학관 해동열람실">
+            <h3>제5공학관 해동열람실</h3>
+            <p>제5공학관 1층에 위치. 24시간 운영.</p>
+            <p class="tag">#공대생에게추천 #진지한학습분위기</p>
+        </section>
+
+        <section class="place-card">
+            <img src="images/cafe1.jpg" alt="학연산클러스터지원센터">
+            <h3>학연산클러스터지원센터</h3>
+            <p>학연산클러스터 지원센터 5층에 위치. 24시간 운영.</p>
+            <p class="tag">#라칼학생들에게추천 #소융대생들에게추천 #오픈형학습라운지 #그룹스터디</p>
+        </section>
+
+         <section class="place-card">
+            <img src="images/cafe1.jpg" alt="학생복지관 글로벌라운지">
+            <h3>학생복지관 글로벌라운지</h3>
+            <p>학생복지관 3층에 위치. 오전7시부터 오후8시까지 운영.</p>
+            <p class="tag">#자유로움 #여유로움</p>
+        </section>
+
+         <section class="place-card">
+            <img src="images/cafe1.jpg" alt="컨퍼런스홀 IC-PBL 라운지">
+            <h3>컨퍼런스홀 IC-PBL 라운지</h3>
+            <p>컨퍼런스홀 지하 1층에 위치. 오전7시부터 오후6시반까지 운영.</p>
+            <p class="tag">#오픈형학습라운지 #쾌적하고여유로운분위기</p>
+        </section>
+
+         <section class="place-card">
+            <img src="images/cafe1.jpg" alt="글로벌문화통상관 독서실">
+            <h3>글로벌문화통상관 독서실</h3>
+            <p>글로벌문화통상관 1층에 위치. 24시간 운영.</p>
+            <p class="tag">#글문통생들에게추천 #독서실 #소음제로</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>HYU ERICA 캠퍼스 프로젝트 2025</p>
+        <p>Team 5</p>
+    </footer>
+
+   </body>
+   </html>
