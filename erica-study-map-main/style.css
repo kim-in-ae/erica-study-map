@@ -1,59 +1,122 @@
-/* 전체 페이지 기본 레이아웃 */
-body {
-    background-color: #F7F5F1; /* 공주님이 고른 아이보리 */
-    font-family: 'Noto Sans KR', sans-serif;
+/* ================================
+   기본 설정
+================================ */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #F7F5F1; /* 공주님이 고른 감성 아이보리 */
+    font-family: 'Noto Sans KR', sans-serif;
     color: #333;
 }
 
-/* 페이지 전체 넓이 제한 (너무 넓지 않도록) */
-#places {
-    max-width: 900px; /* 가운데 카드 너비 제한 */
-    margin: 0 auto;   /* 가운데 정렬 */
-    padding: 20px 15px;
-}
-
-/* 헤더 영역 */
-header {
+/* ================================
+   헤더(히어로 섹션)
+================================ */
+.hero {
     text-align: center;
-    margin-top: 20px;
+    padding: 60px 20px 40px;
+    background-color: #F7F5F1;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 10px;
+    letter-spacing: -0.5px;
 }
 
-header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-header .subtitle {
+.hero .subtitle {
+    font-size: 1rem;
     color: #777;
-    font-size: 0.95rem;
+    margin-bottom: 25px;
 }
 
-/* 각 카드 기본 여백 */
+.hero::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #e6e2da;
+    margin: 25px auto 0;
+}
+
+/* 지도 보러가기 버튼 */
+.go-map {
+    padding: 12px 24px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.go-map:hover {
+    background-color: #3d4f63;
+}
+
+/* ================================
+   카테고리 메뉴
+================================ */
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0 35px;
+    padding: 0 10px;
+}
+
+.cat-btn {
+    padding: 8px 15px;
+    background-color: #ece9e2;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #444;
+    transition: 0.25s ease;
+}
+
+.cat-btn:hover {
+    background-color: #ded7c9;
+}
+
+.cat-btn.active {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* ================================
+   장소 카드 (Place Card)
+================================ */
 .place-card {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 25px;
+    border-radius: 18px;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* 카드 내 이미지 */
 .place-card img {
     width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    border-radius: 14px;
+    margin-bottom: 18px;
 }
 
-/* 카드 제목 */
 .place-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-size: 1.35rem;
+    margin: 12px 0 10px;
+    font-weight: 700;
+    color: #34495e;
 }
 
-/* 태그 디자인 */
+/* 태그 스타일 */
 .tag {
     display: inline-block;
     background: #ece9e2;
@@ -64,119 +127,14 @@ header .subtitle {
     margin-top: 5px;
 }
 
-html, body {
-    height:100%;
-    margin:0;
-}
-#map {
-    height:100%
-}   
-
-body {
-  font-family: 'Pretendard', sans-serif;
-  background-color: #F7F5F1; /* 감성 베이지 */
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #2c3e50; /* 짙은 네이비 */
-  letter-spacing: -1px;
-}
-
-.place-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 25px auto;
-  width: 90%;
-  max-width: 700px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-}
-
-.place-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 12px;
-}
-
-.sub-place h3 {
-  font-size: 1.4rem;
-  color: #1c2d5a;
-  margin-bottom: 5px;
-}
-
-.sub-place p {
-  line-height: 1.5;
-  color: #444;
-}
-
-/* 메인 제목 감성 스타일 */
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 2.7rem;
-    font-weight: 600;
-    color: #2c3e50; /* 딥네이비 톤 */
-    letter-spacing: -1px;
-    margin-bottom: 25px;
-}
-
-/* 지도 보러가기 버튼 */
-button {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    padding: 12px 25px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-button:hover {
-    background-color: #3d4f63;
-}
-
-/* 장소 카드 최종 디자인 */
-.place-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 18px;
-    margin-bottom: 35px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* 카드 이미지 스타일 */
-.place-card img {
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 18px;
-}
-
-/* 카드 제목 */
-.place-card h3 {
-    font-size: 1.35rem;
-    margin: 12px 0 10px 0;
-    font-weight: 700;
-    color: #34495e;
-}
-
-/* 하위 장소 전체 컨테이너 */
+/* ================================
+   하위 장소 (Sub Places)
+================================ */
 .sub-places {
+    display: none;  /* 기본 숨김 */
     margin-top: 20px;
-    padding-left: 10px;
 }
 
-/* 하위 장소 아이템 */
 .sub-place {
     margin-bottom: 20px;
 }
@@ -210,114 +168,9 @@ button:hover {
     background: #ded7c9;
 }
 
-/* 기본: 하위 장소 숨기기 */
-.sub-places {
-    display: none;
-}
-
-/* 하위 장소 토글 버튼 */
-.toggle-btn {
-    background: #ece9e2;
-    color: #444;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    transition: 0.2s;
-}
-
-.toggle-btn:hover {
-    background: #ded7c9;
-}
-
-/* 기본: 하위 장소 숨기기 */
-.sub-places {
-    display: none;
-}
-
-/* 헤더(히어로 섹션) */
-.hero {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background-color: #F7F5F1;  /* 공주님이 고른 아이보리 */
-}
-
-/* 메인 제목 */
-.hero h1 {
-    font-size: 2.6rem;
-    font-weight: 600;   /* 모던하게 */
-    color: #2c3e50;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
-}
-
-/* 부제 */
-.hero .subtitle {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 25px;
-}
-
-/* 아주 얇은 라인 */
-.hero::after {
-    content: '';
-    display: block;
-    width: 70%;
-    height: 1px;
-    background: #e6e2da;
-    margin: 0 auto;
-    margin-top: 25px;
-}
-
-/* 지도 보기 버튼 */
-.go-map {
-    padding: 12px 24px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-.go-map:hover {
-    background-color: #3d4f63;
-}
-/* 카테고리 메뉴 */
-.category-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 25px 0 35px;
-    padding: 0 10px;
-}
-
-/* 카테고리 버튼 */
-.cat-btn {
-    padding: 8px 15px;
-    background-color: #ece9e2;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: #444;
-    transition: 0.25s ease;
-}
-
-.cat-btn:hover {
-    background-color: #ded7c9;
-}
-
-.cat-btn.active {
-    background-color: #2c3e50;
-    color: white;
-}
-
-/* 스크롤 페이드 인 */
+/* ================================
+   스크롤 페이드 인
+================================ */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -327,4 +180,22 @@ button:hover {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ================================
+   반응형 디자인
+================================ */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .place-card {
+        padding: 18px;
+    }
+
+    .cat-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
 }

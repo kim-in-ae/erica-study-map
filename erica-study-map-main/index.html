@@ -261,5 +261,24 @@
     });
 </script>
 
+<script>
+    // 자세히 보기 토글 기능
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const subPlaces = btn.nextElementSibling;
+
+            if (subPlaces.style.display === "block") {
+                subPlaces.style.display = "none";
+                btn.textContent = "자세히 보기 ▾";
+            } else {
+                subPlaces.style.display = "block";
+                btn.textContent = "접기 ▲";
+            }
+        });
+    });
+</script>
+
    </body>
    </html>
