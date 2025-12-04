@@ -94,13 +94,27 @@ html, body {
    장소 카드 (Place Card)
 ================================ */
 .place-card {
-    background: #ffffff;
+    background: #ffffffea; /* 완전 흰색 대신 약간 투명한 흰색 */
+    backdrop-filter: blur(2px); /* 약간의 글래스 느낌 */
     padding: 25px;
     border-radius: 18px;
     margin: 25px auto;
     width: 90%;
     max-width: 700px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.place-card::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: #e8e4dc;
+    opacity: 0.6;
 }
 
 .place-card img {
@@ -114,16 +128,29 @@ html, body {
     margin: 12px 0 10px;
     font-weight: 700;
     color: #34495e;
+     position: relative;
+    padding-bottom: 6px;
 }
+
+.place-card h3::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #d0ccc4;
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
 
 /* 태그 스타일 */
 .tag {
     display: inline-block;
-    background: #ece9e2;
-    color: #555;
     font-size: 0.8rem;
-    padding: 3px 8px;
-    border-radius: 8px;
+    background: #f0ede6;
+    color: #555;
+    padding: 4px 10px;
+    border-radius: 12px;
     margin-top: 5px;
 }
 
@@ -150,6 +177,14 @@ html, body {
     margin: 4px 0;
     color: #555;
 }
+
+.sub-place img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+}
+
 
 /* 하위 장소 토글 버튼 */
 .toggle-btn {
@@ -181,6 +216,13 @@ html, body {
     opacity: 1;
     transform: translateY(0);
 }
+/* ================================
+   섹션 배경 
+================================ */
+.section-bg {
+    background: linear-gradient(to bottom, #F7F5F1, #f0ece5);
+    padding: 30px 0;
+}
 
 /* ================================
    반응형 디자인
@@ -198,4 +240,15 @@ html, body {
         padding: 6px 10px;
         font-size: 0.8rem;
     }
+}
+/* ================================
+   푸터 스타일
+================================ */
+.footer {
+    text-align: center;
+    padding: 25px 0 40px;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #e5e1d8;
 }
