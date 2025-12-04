@@ -34,6 +34,8 @@
             <p>조용하고 집중하기 좋은 대표 공간. 전원, 와이파이, 열람실 완비!</p>
             <p class="tag">#도서관 #집중 #정숙</p>
 
+            <button class="toggle-btn">자세히 보기 ▾</button>
+
             <!-- ▼ 하위 장소들 소개 시작 ▼ -->
              <div class="sub-places">
 
@@ -174,6 +176,23 @@
         <p>2025-2 바이오신약융합학부 오픈소스개발과활용 프로젝트</p>
         <p>Team Name</p>
     </footer>
+
+    <script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const subPlaces = document.querySelector('.sub-places');
+
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = subPlaces.style.display === 'none' || subPlaces.style.display === '';
+
+        if (isHidden) {
+            subPlaces.style.display = 'block';
+            toggleBtn.textContent = '접기 ▴';
+        } else {
+            subPlaces.style.display = 'none';
+            toggleBtn.textContent = '자세히 보기 ▾';
+        }
+    });
+</script>
 
    </body>
    </html>
