@@ -237,3 +237,52 @@ button:hover {
     display: none;
 }
 
+/* 헤더(히어로 섹션) */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #F7F5F1;  /* 공주님이 고른 아이보리 */
+}
+
+/* 메인 제목 */
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 600;   /* 모던하게 */
+    color: #2c3e50;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+/* 부제 */
+.hero .subtitle {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* 아주 얇은 라인 */
+.hero::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #e6e2da;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/* 지도 보기 버튼 */
+.go-map {
+    padding: 12px 24px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.go-map:hover {
+    background-color: #3d4f63;
+}
