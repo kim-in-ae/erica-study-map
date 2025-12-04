@@ -5,3 +5,48 @@ html, body {
 #map {
     height:100%
 }   
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #f7f5f1; /* 감성 베이지 */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3e50; /* 짙은 네이비 */
+  letter-spacing: -1px;
+}
+
+.place-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.place-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.sub-place h3 {
+  font-size: 1.4rem;
+  color: #1c2d5a;
+  margin-bottom: 5px;
+}
+
+.sub-place p {
+  line-height: 1.5;
+  color: #444;
+}
+
