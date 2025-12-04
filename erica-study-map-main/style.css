@@ -286,3 +286,33 @@ button:hover {
 .go-map:hover {
     background-color: #3d4f63;
 }
+/* 카테고리 메뉴 */
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0 35px;
+    padding: 0 10px;
+}
+
+/* 카테고리 버튼 */
+.cat-btn {
+    padding: 8px 15px;
+    background-color: #ece9e2;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #444;
+    transition: 0.25s ease;
+}
+
+.cat-btn:hover {
+    background-color: #ded7c9;
+}
+
+.cat-btn.active {
+    background-color: #2c3e50;
+    color: white;
+}

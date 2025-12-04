@@ -23,6 +23,17 @@
     </button>
 </header>
 
+<nav class="category-menu">
+    <button class="cat-btn">학술정보관</button>
+    <button class="cat-btn">제1공학관</button>
+    <button class="cat-btn">제5공학관</button>
+    <button class="cat-btn">학생복지관</button>
+    <button class="cat-btn">컨퍼런스홀</button>
+    <button class="cat-btn">학연산/라칼</button>
+    <button class="cat-btn">글문통</button>
+</nav>
+
+
 
     <main id="places">
 
@@ -190,7 +201,17 @@
             toggleBtn.textContent = '자세히 보기 ▾';
         }
     });
+<script>
+    // 필터 버튼 활성화 표시
+    const buttons = document.querySelectorAll('.cat-btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
 </script>
+
 
    </body>
    </html>
