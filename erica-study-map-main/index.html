@@ -37,7 +37,7 @@
 
     <main id="places">
 
-        <section class="place-card">
+        <section class="place-card" data-category="학술정보관">
             <img src="images/학술정보관.jpg" alt="ERICA 학술정보관">
             <h3>ERICA 학술정보관</h3>
             <p>조용하고 집중하기 좋은 대표 공간. 전원, 와이파이, 열람실 완비!</p>
@@ -130,49 +130,49 @@
 
         </section>
 
-        <section class="place-card">
+        <section class="place-card" data-category="제1공학관">
             <img src="images/제1공학관 해동 Open Space.jpg" alt="제1공학관 해동 Open Space">
             <h3>제1공학관 해동 Open Space</h3>
             <p>제1공학관 1층에 위치. 24시간 운영.</p>
             <p class="tag">#공대생에게추천</p>
         </section>
 
-        <section class="place-card">
+        <section class="place-card" data-category="제1공학관">
             <img src="images/제1공학관 한자공 라운지.jpg" alt="제1공학관 한자공 라운지">
             <h3>제1공학관 한자공 라운지</h3>
             <p>제1공학관 3층에 위치. 24시간 운영.자유로운 분위기.</p>
             <p class="tag">#공대생에게추천</p>
         </section>
 
-        <section class="place-card">
+        <section class="place-card" data-category="제5공학관">
             <img src="images/제5공학관 해동열람실.jpg" alt="제5공학관 해동열람실">
             <h3>제5공학관 해동열람실</h3>
             <p>제5공학관 1층에 위치. 24시간 운영.</p>
             <p class="tag">#공대생에게추천 #진지한학습분위기</p>
         </section>
 
-        <section class="place-card">
+        <section class="place-card" data-category="학연산/라칼">
             <img src="images/학연산클러스터지원센터.jpg" alt="학연산클러스터지원센터">
             <h3>학연산클러스터지원센터</h3>
             <p>학연산클러스터 지원센터 5층에 위치. 24시간 운영.</p>
             <p class="tag">#라칼학생들에게추천 #소융대생들에게추천 #오픈형학습라운지 #그룹스터디</p>
         </section>
 
-         <section class="place-card">
+        <section class="place-card" data-category="학생복지관">
             <img src="images/학생복지관 글로벌라운지.jpg" alt="학생복지관 글로벌라운지">
             <h3>학생복지관 글로벌라운지</h3>
             <p>학생복지관 3층에 위치. 오전7시부터 오후8시까지 운영.</p>
             <p class="tag">#자유로움 #여유로움</p>
         </section>
 
-         <section class="place-card">
+         <section class="place-card" data-category="컨퍼런스홀">
             <img src="images/컨퍼런스홀 IC-PBL 라운지.jpg" alt="컨퍼런스홀 IC-PBL 라운지">
             <h3>컨퍼런스홀 IC-PBL 라운지</h3>
             <p>컨퍼런스홀 지하 1층에 위치. 오전7시부터 오후6시반까지 운영.</p>
             <p class="tag">#오픈형학습라운지 #쾌적하고여유로운분위기</p>
         </section>
 
-         <section class="place-card">
+        <section class="place-card" data-category="글문통">
             <img src="images/글로벌문화통상관 독서실.jpg" alt="글로벌문화통상관 독서실">
             <h3>글로벌문화통상관 독서실</h3>
             <p>글로벌문화통상관 1층에 위치. 24시간 운영.</p>
@@ -208,6 +208,33 @@
         btn.addEventListener('click', () => {
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+        });
+    });
+</script>
+
+<script>
+    const cards = document.querySelectorAll('.place-card');
+    const filterButtons = document.querySelectorAll('.cat-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 어떤 카테고리가 눌렸는지
+            const category = button.textContent.trim();
+
+            // 버튼 active 스타일 적용
+            filterButtons.forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+
+            // 카드 필터링
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (category === cardCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     });
 </script>
