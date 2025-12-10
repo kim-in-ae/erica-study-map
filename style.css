@@ -1,0 +1,73 @@
+/* style.css (기존 코드 + 버튼 코드 추가) */
+
+/* (image_f8683b.png에 있는 기존 코드...) */
+body {
+    font-family: "Pretendard", sans-serif;
+    background: #eaf7ff; /* 파스텔 하늘색 */
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 40px 20px 10px; /* 헤더 여백 조정 */
+}
+h1 {
+    font-size: 2rem;
+    color: #4da3ff; /* 하늘색 포인트 */
+    font-weight: 700;
+}
+.subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+.card {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 22px; /* 카드는 이미 둥글게 되어있음 */
+    box-shadow: 0 5px 20px rgba(100, 165, 255, 0.25);
+    text-align: center;
+}
+.desc {
+    margin-bottom: 25px; /* 버튼과의 간격 확보 */
+    line-height: 1.5;
+    color: #666;
+}
+
+/* 💙 파란색 버튼 스타일 */
+.go-btn {
+    display: inline-block;
+    padding: 15px 35px; 
+    font-size: 1.1em;
+    font-weight: 700; 
+    color: #ffffff; 
+    
+    /* ✨ 진하고 시원한 파란색으로 변경: #2196F3 (Google Material Blue) */
+    background-color: #2196F3; 
+    
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    outline: none;
+    
+    /* 그림자 색상도 파란색 계열로 변경 */
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4); 
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.go-btn:hover {
+    /* 호버 시 더 진한 파란색 */
+    background-color: #1976D2; 
+    
+    /* 튀어오르는 모션 유지 */
+    transform: translateY(-4px) scale(1.02); 
+    box-shadow: 0 12px 25px rgba(33, 150, 243, 0.6);
+}
+
+.go-btn:active {
+    transform: translateY(0) scale(0.98); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
