@@ -361,3 +361,26 @@ html, body {
     object-fit: cover;
 }
 
+/* 눈송이 효과 */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1rem;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.9;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+.snowflake {
+    color: #e8f5ff; /* 연파랑 눈 색 */
+}

@@ -309,5 +309,33 @@
     ✨ 바이오뿅뿅팀은 새로운 스팟을 탐험 중…!
 </div>
 
+<script>
+    // 눈송이 생성 함수
+    function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.textContent = "❄";
+        
+        // 랜덤 위치
+        snowflake.style.left = Math.random() * 100 + "vw";
+
+        // 랜덤 크기
+        const size = Math.random() * 1.2 + 0.8;
+        snowflake.style.fontSize = size + "rem";
+
+        // 랜덤 지속 시간
+        snowflake.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(snowflake);
+
+        // 떨어진 눈 삭제
+        setTimeout(() => {
+            snowflake.remove();
+        }, 6000);
+    }
+
+    setInterval(createSnowflake, 200); // 눈 생성 속도
+</script>
+
    </body>
    </html>
