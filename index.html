@@ -373,5 +373,19 @@
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.getElementById("closeNote");
+    const note = document.getElementById("updateNote");
+
+    if (closeBtn && note) {
+        closeBtn.addEventListener("click", function () {
+            note.style.display = "none";
+        });
+    }
+});
+</script>
+
+
    </body>
    </html>
