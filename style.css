@@ -460,4 +460,30 @@ html, body {
     background: #3c4f63;
 }
 /* ================================
-   끝
+    카테고리 미지의 공부 스팟 사용자 참여 안내문
+================================ */
+.suggest-box {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6A5F4D;
+    margin: 40px 0 10px;
+}
+
+/* ================================
+   오른쪽 사이드 알림 박스 닫기 버튼
+================================ */
+/* 알림 박스 닫기 버튼 */
+.close-note {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #8a7f6a;
+}
+
+.close-note:hover {
+    color: #4c4a47;
+}
