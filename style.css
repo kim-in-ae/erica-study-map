@@ -252,6 +252,11 @@ html, body {
     margin-top: 40px;
     border-top: 1px solid #e5e1d8;
 }
+.creator-note {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #888;
+}
 
 /* ================================
     카테고리 미지의 공부 스팟
