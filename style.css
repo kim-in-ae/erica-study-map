@@ -261,6 +261,12 @@ html, body {
 /* ================================
     카테고리 미지의 공부 스팟
 ================================ */
+.explore-list {
+    font-size: 0.85rem;
+    color: #7A6F63;
+    margin-top: 8px;
+}
+
 .category.mysterious {
     background: #F4EFE6;
     border: 1px dashed #CBB9A6;
